@@ -13,8 +13,11 @@ let songRate = 1;
 function preload(){
   song1 = loadSound("blossom.mp3");  
 }
-
+function mousePressed() {
+ userStartAudio();	
+}
 function setup() {
+  getAudioContext().suspend();
   let cnv = createCanvas(400,400);
       song1.loop();
 		amplitude = new p5.Amplitude();
